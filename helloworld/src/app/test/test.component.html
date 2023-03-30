@@ -1,0 +1,84 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+      <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+  </ng-template>
+  <ng-template pTemplate="end">
+      <input type="text" pInputText placeholder="Search" />
+  </ng-template>
+</p-menubar>
+
+
+
+<p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
+
+
+<h1>{{date | date :'full' }}</h1>
+<h3>{{250|currency:'TND'}}</h3>
+<h2>{{'groupe3'|uppercase}}</h2>
+
+<h1 style="text-align: center;">Welcome Test</h1>
+
+<button class="test" routerLink="/home">home</button>
+
+<h1>{{name}}</h1>
+<p>hello {{name2}}</p>
+<p>{{getStatus()}}</p>
+<button (click)="save()">Envoyer</button>
+<ul *ngFor = "let n of namelist">
+    <li>{{n}}</li>
+
+</ul>
+<div *ngIf = "condition">
+    <h1> Hello World!!!!!! </h1>
+</div>
+<input type="text" class="form-control" [(ngModel)]="msg"><b class="text-danger">{{msg}}</b>
+
+<div>
+    <div [ngSwitch]="name">
+        <div *ngSwitchCase = "'Ahmed'">Welcome Ahmed </div>
+        <div *ngSwitchCase = "'Imen'">Welcome Imen </div>
+        <div *ngSwitchCase = "'Ali'">Welcome Ali </div>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <p-button label="Warning" styleClass="p-button-rounded p-button-warning"></p-button>
+  <p-button label="Primary" styleClass="p-button-outlined"></p-button>
+  <p-button label="Primary" styleClass="p-button-rounded"></p-button>
+
+<p-button label="Secondary" styleClass="p-button-rounded p-button-secondary"></p-button>
+<p-button label="Success" styleClass="p-button-rounded p-button-success"></p-button>
+<p-button label="Info" styleClass="p-button-rounded p-button-info"></p-button>
+<p-button label="Warning" styleClass="p-button-rounded p-button-warning"></p-button>
+<p-button label="Help" styleClass="p-button-rounded p-button-help"></p-button>
+<p-button label="Danger" styleClass="p-button-rounded p-button-danger"></p-button>
+
+
+
